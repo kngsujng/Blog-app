@@ -4,34 +4,95 @@
 		"date": "2023-12-31",
 		"title": "2023년 리뷰",
 		"description": "2023년 한해 동안 배운 기술들, 생각들 정리",
-		"category": "story"
+		"category": "story",
+		"featuered": false
 	},
 	{
 		"id": "2",
 		"date": "2023-05-02",
 		"title": "리액트 18버전!",
 		"description": "리액트 18에 추가된 사항들 정리",
-		"category": "frontend"
+		"category": "frontend",
+		"featuered": true
 	},
 	{
 		"id": "3",
 		"date": "2023-04-15",
 		"title": "리액트 Best Practice!",
 		"description": "리액트를 정확하게 사용하는 방법들을 정리",
-		"category": "frontend"
+		"category": "frontend",
+		"featuered": false
 	},
 	{
 		"id": "4",
 		"date": "2023-04-10",
 		"title": "Node 프로 팁!",
 		"description": "노드를 프로처럼 사용하기 위한 모든 팁들을 정리",
-		"category": "backend"
+		"category": "backend",
+		"featuered": true
 	},
 	{
 		"id": "5",
 		"date": "2022-06-15",
 		"title": "자바스크립트 10가지 프로팁!",
 		"description": "프로처럼 자바스크립트 사용할 수 있는 10가지 팁",
-		"category": "javascript"
+		"category": "javascript",
+		"featuered": true
+	},
+	{
+		"id": "6",
+		"date": "2022-08-21",
+		"title": "Node 기초 정리",
+		"description": "기본적인 Node 사용법에 대해 전부 정리!",
+		"category": "backend",
+		"featuered": false
+	},
+	{
+		"id": "7",
+		"date": "2022-12-31",
+		"title": "2022년 리뷰",
+		"description": "2022년 한해동안 배운 기술들, 생각들 정리",
+		"category": "story",
+		"featuered": false
+	},
+	{
+		"id": "8",
+		"date": "2022-05-08",
+		"title": "자바스크립트 기초 문법",
+		"description": "기본 문법부터 사용하는 실전까지 최종 정리",
+		"category": "javascript",
+		"featuered": true
+	},
+	{
+		"id": "9",
+		"date": "2021-12-31",
+		"title": "2021년 회고",
+		"description": "2021년 한해동안 배운 기술들, 생각들 정리",
+		"category": "story",
+		"featuered": true
+	},
+	{
+		"id": "10",
+		"date": "2023-09-31",
+		"title": "주니어 개발자로서 살아남는 법",
+		"description": "주니어 개발자가 가져야 하는 마음가짐",
+		"category": "story",
+		"featuered": false
+	},
+	{
+		"id": "11",
+		"date": "2024-01-17",
+		"title": "Next.js 버전 14 업데이트 사항",
+		"description": "Next.js 버전 업그레이드 내용",
+		"category": "frontend",
+		"featuered": false
+	},
+	{
+		"id": "12",
+		"date": "2024-01-01",
+		"title": "웹 개발자로서 알아두어야 하는 네트워크",
+		"description": "모든 개발자를 위한 HTTP 웹 기본 지식",
+		"category": "backend",
+		"featuered": false
 	}
 ]
