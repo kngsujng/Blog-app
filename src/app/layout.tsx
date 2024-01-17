@@ -4,6 +4,7 @@ import './globals.css';
 import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
+const MENU_CLASSNAME = 'hover:text-blue-400 px-2 rounded-lg';
 
 export const metadata: Metadata = {
 	title: "Kngsujng's Blog",
@@ -24,10 +25,30 @@ export default function RootLayout({
 							<Link href="/">Kngsujng&apos;s Blog</Link>
 						</h1>
 						<div className="flex gap-4">
-							<Link href="/">home</Link>
-							<Link href="/about">about</Link>
-							<Link href="/posts">posts</Link>
-							<Link href="/contact">contact</Link>
+							<Link
+								href="/"
+								className={MENU_CLASSNAME}
+							>
+								home
+							</Link>
+							<Link
+								href="/about"
+								className={MENU_CLASSNAME}
+							>
+								about
+							</Link>
+							<Link
+								href="/posts"
+								className={MENU_CLASSNAME}
+							>
+								posts
+							</Link>
+							<Link
+								href="/contact"
+								className={MENU_CLASSNAME}
+							>
+								contact
+							</Link>
 						</div>
 					</nav>
 				</header>
