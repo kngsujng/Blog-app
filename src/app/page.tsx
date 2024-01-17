@@ -9,11 +9,14 @@ export default async function Home() {
 		<div className="m-12">
 			<Profile />
 			<section>
-				<h1 className="text-2xl font-bold mt-10">Featured Posts</h1>
-				<ul className="grid grid-cols-3 gap-6">
+				<h1 className="text-2xl font-bold mt-10 ml-4">Featured Posts</h1>
+				<ul className="grid grid-cols-3">
 					{posts &&
 						posts.map((post) => (
-							<li key={post.id}>
+							<li
+								key={post.id}
+								className="shadow-lg text-center m-4"
+							>
 								<PostCard post={post} />
 							</li>
 						))}

@@ -6,13 +6,16 @@ export default async function PostCarousel() {
 	const posts = await getNotFeaturedPosts();
 	return (
 		<section>
-			<h1 className="text-2xl font-bold mt-10">You may like</h1>
+			<h1 className="text-2xl font-bold mt-14 ml-2">You may like</h1>
 			<MultiCarousel>
 				{posts &&
 					posts.map((post) => (
-						<div key={post.id}>
+						<li
+							key={post.id}
+							className="shadow-lg text-center m-4"
+						>
 							<PostCard post={post} />
-						</div>
+						</li>
 					))}
 			</MultiCarousel>
 		</section>

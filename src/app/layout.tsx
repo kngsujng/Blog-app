@@ -19,7 +19,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className}>
 				<header>
-					<nav className="flex justify-between p-10">
+					<nav className="flex justify-between m-12">
 						<h1 className="text-2xl font-bold">
 							<Link href="/">Kngsujng&apos;s Blog</Link>
 						</h1>

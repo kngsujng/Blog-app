@@ -25,7 +25,7 @@ const responsive = {
 
 export default function MultiCarousel({ children }: { children: ReactNode }) {
 	return (
-		<>
+		<ul>
 			<Carousel
 				responsive={responsive}
 				infinite
@@ -34,6 +34,6 @@ export default function MultiCarousel({ children }: { children: ReactNode }) {
 			>
 				{children}
 			</Carousel>
-		</>
+		</ul>
 	);
 }
