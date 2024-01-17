@@ -8,7 +8,7 @@ export default function Profile() {
 	const router = useRouter();
 
 	return (
-		<section className="flex-col p-4 text-center">
+		<section className="flex flex-col p-4 text-center">
 			<Image
 				className="rounded-full mx-auto mb-4"
 				src={PROFILE_IMG}
