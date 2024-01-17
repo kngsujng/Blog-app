@@ -31,7 +31,10 @@ export default function RootLayout({
 						</div>
 					</nav>
 				</header>
-				{children}
+				<main>{children}</main>
+				<footer className="text-center bg-blue-950 text-white mx-12">
+					<p>All Right Reserved @kngsujng</p>
+				</footer>
 			</body>
 		</html>
 	);
