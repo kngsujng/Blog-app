@@ -1,4 +1,4 @@
-import { sendEmail } from '@/api/nodemailer';
+import { sendEmail } from '@/app/api/nodemailer';
 
 export async function POST(req: Request) {
 	const body = await req.json(); // body = ReadableStream
