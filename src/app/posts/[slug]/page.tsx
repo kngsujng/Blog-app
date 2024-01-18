@@ -14,7 +14,7 @@ export default async function Post({ params: { slug } }: Props) {
 	if (post) {
 		const { path, date, title, description } = post;
 		return (
-			<section className="mx-32 rounded-t-3xl bg-gray-200">
+			<section className="mx-96 rounded-t-3xl bg-gray-50">
 				<Image
 					className="w-full h-80 object-fill rounded-t-3xl"
 					src={`/images/${path}.png`}
@@ -33,7 +33,9 @@ export default async function Post({ params: { slug } }: Props) {
 						<p className="font-medium">{date}</p>
 					</div>
 				</section>
-				<MarkdownRender id={path} />
+				<section className="p-10 pb-40">
+					<MarkdownRender id={path} />
+				</section>
 			</section>
 		);
 	}
