@@ -1,14 +1,10 @@
-'use client';
-
 import Image from 'next/image';
 import PROFILE_IMG from './../../../public/images/profile.jpeg';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function Profile() {
-	const router = useRouter();
-
 	return (
-		<section className="flex flex-col p-4 text-center">
+		<section className="p-4 text-center">
 			<Image
 				className="rounded-full mx-auto mb-4"
 				src={PROFILE_IMG}
@@ -17,17 +13,15 @@ export default function Profile() {
 				height="200"
 				priority
 			/>
-			<div>
-				<p className="text-lg font-bold">Hi, I&apos;m Kngsujng</p>
-				<p className="font-medium">Front-end engineer</p>
-				<p>J-커브 성장의 힘을 믿는 코더, 수정</p>
-				<button
-					onClick={() => router.push('/contact')}
-					className="rounded-full bg-sky-500 mt-4 p-2"
-				>
-					Contact Me
-				</button>
-			</div>
+			<h2 className="text-2xl font-bold">Hi, I&apos;m Kngsujng</h2>
+			<h3 className="text-lg font-semibold">Front-end engineer</h3>
+			<p className="mb-4">J-커브 성장의 힘을 믿는 코더, 수정</p>
+			<Link
+				href="/contact"
+				className="rounded-xl bg-sky-500 px-4 py-1"
+			>
+				Contact Me
+			</Link>
 		</section>
 	);
 }
