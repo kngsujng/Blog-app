@@ -8,7 +8,7 @@ export default function PostCard({
 	post: Post;
 }) {
 	return (
-		<Link href="/posts/:slug">
+		<Link href={`/posts/${id}`}>
 			<Image
 				src={`/images/${id}.jpeg`}
 				alt="포스트 대표사진"

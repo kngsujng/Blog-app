@@ -7,7 +7,7 @@ export type Post = {
 	title: string;
 	description: string;
 	category: string;
-	featuered: boolean;
+	featured: boolean;
 };
 
 export async function getAllPosts(): Promise<Post[]> {
@@ -18,15 +18,15 @@ export async function getAllPosts(): Promise<Post[]> {
 
 export async function getFeaturedPosts(): Promise<Post[]> {
 	const featuredPosts = await getAllPosts();
-	return featuredPosts.filter((post) => post.featuered);
+	return featuredPosts.filter((post) => post.featured);
 }
 
 export async function getNotFeaturedPosts(): Promise<Post[]> {
 	const notFeaturedPosts = await getAllPosts();
-	return notFeaturedPosts.filter((post) => !post.featuered);
+	return notFeaturedPosts.filter((post) => !post.featured);
 }
 
 export async function getPost(id: string): Promise<Post | undefined> {
-	const posts = await getFeaturedPosts();
+	const posts = await getAllPosts();
 	return posts.find((item) => item.id === id);
 }
