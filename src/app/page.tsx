@@ -6,7 +6,7 @@ import Profile from './components/Profile';
 export default async function Home() {
 	const posts = await getFeaturedPosts();
 	return (
-		<div className="m-12">
+		<div>
 			<Profile />
 			<section>
 				<h1 className="text-2xl font-bold mt-10 ml-4">Featured Posts</h1>
