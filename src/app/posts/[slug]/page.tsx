@@ -2,6 +2,7 @@ import { Post, getPost } from '@/app/api/posts';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import { FaRegCalendar } from 'react-icons/fa';
+import MarkdownRender from '@/app/components/MarkdownRender';
 
 export type Props = { params: { slug: string } };
 
@@ -11,12 +12,12 @@ export default async function Post({ params: { slug } }: Props) {
 		redirect('/posts');
 	}
 	if (post) {
-		const { id, date, title, description } = post;
+		const { path, date, title, description } = post;
 		return (
 			<section className="mx-32 rounded-t-3xl bg-gray-200">
 				<Image
-					className="w-full h-72 object-fill rounded-t-3xl"
-					src={`/images/${id}.png`}
+					className="w-full h-80 object-fill rounded-t-3xl"
+					src={`/images/${path}.png`}
 					alt={title}
 					width="300"
 					height="300"
@@ -32,6 +33,7 @@ export default async function Post({ params: { slug } }: Props) {
 						<p className="font-medium">{date}</p>
 					</div>
 				</section>
+				<MarkdownRender id={path} />
 			</section>
 		);
 	}

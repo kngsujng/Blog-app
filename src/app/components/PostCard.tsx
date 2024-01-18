@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { Post } from '../api/posts';
 
 export default function PostCard({
-	post: { id, date, title, description, category },
+	post: { path, date, title, description, category },
 }: {
 	post: Post;
 }) {
 	return (
-		<Link href={`/posts/${id}`}>
+		<Link href={`/posts/${path}`}>
 			<Image
-				src={`/images/${id}.png`}
+				src={`/images/${path}.png`}
 				alt="포스트 대표사진"
-				width="500"
-				height="500"
+				width="600"
+				height="600"
 				priority
 			/>
 			<div className="p-5">

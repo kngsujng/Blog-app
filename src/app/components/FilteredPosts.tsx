@@ -26,7 +26,7 @@ export default function FilteredPosts({ posts, categories }: Prop) {
 				{filteredPosts &&
 					filteredPosts.map((post) => (
 						<li
-							key={post.id}
+							key={post.path}
 							className="shadow-lg text-center m-4"
 						>
 							<PostCard post={post} />

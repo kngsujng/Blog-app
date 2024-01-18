@@ -2,7 +2,7 @@ import path from 'path';
 import { promises as fs } from 'fs';
 
 export type Post = {
-	id: string;
+	path: string;
 	date: string;
 	title: string;
 	description: string;
@@ -26,7 +26,13 @@ export async function getNotFeaturedPosts(): Promise<Post[]> {
 	return notFeaturedPosts.filter((post) => !post.featured);
 }
 
-export async function getPost(id: string): Promise<Post | undefined> {
+export async function getPost(path: string): Promise<Post | undefined> {
 	const posts = await getAllPosts();
-	return posts.find((item) => item.id === id);
+	return posts.find((item) => item.path === path);
+}
+
+export async function getContent(id: string) {
+	const filePath = path.join(process.cwd(), 'data/posts', `${id}.md`);
+	const content = await fs.readFile(filePath, 'utf-8');
+	return { content, fallback: false };
 }

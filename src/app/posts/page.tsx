@@ -3,17 +3,19 @@ import FilteredPosts from '../components/FilteredPosts';
 
 export type Category =
 	| 'All Posts'
-	| 'story'
 	| 'frontend'
-	| 'backend'
-	| 'javascript';
+	| 'javascript'
+	| 'project'
+	| 'etc'
+	| 'network';
 
 const categories: Category[] = [
 	'All Posts',
-	'story',
+	'project',
 	'frontend',
-	'backend',
 	'javascript',
+	'network',
+	'etc',
 ];
 
 export default async function Posts() {

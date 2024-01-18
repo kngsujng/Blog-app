@@ -15,7 +15,7 @@ export default function Categories({ categories, handleCategory }: Props) {
 			</h1>
 			<ul>
 				{categories.map((v: Category, i) => (
-					<li key={i}>
+					<li key={v}>
 						<button
 							onClick={() => handleCategory(v)}
 							className="hover:text-blue-400 focus:text-blue-400"
