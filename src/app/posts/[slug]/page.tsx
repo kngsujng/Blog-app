@@ -16,7 +16,7 @@ export default async function Post({ params: { slug } }: Props) {
 			<section className="mx-32 rounded-t-3xl bg-gray-200">
 				<Image
 					className="w-full h-72 object-fill rounded-t-3xl"
-					src={`/images/${id}.jpeg`}
+					src={`/images/${id}.png`}
 					alt={title}
 					width="300"
 					height="300"

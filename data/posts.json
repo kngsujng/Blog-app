@@ -1,98 +1,98 @@
 [
 	{
 		"id": "1",
-		"date": "2023-12-31",
-		"title": "2023년 리뷰",
-		"description": "2023년 한해 동안 배운 기술들, 생각들 정리",
-		"category": "story",
+		"date": "2023-12-27",
+		"title": "웹 브라우저 동작원리",
+		"description": "웹 브라우저 동작 원리에 대해 알아보자 ! (feat. 이벤트 루프)",
+		"category": "frontend",
 		"featured": false
 	},
 	{
 		"id": "2",
-		"date": "2023-05-02",
-		"title": "리액트 18버전!",
-		"description": "리액트 18에 추가된 사항들 정리",
-		"category": "frontend",
-		"featured": true
+		"date": "2023-12-12",
+		"title": "브라우저 렌더링 과정",
+		"description": "주소창에 google.com을 입력하면 발생하는 일",
+		"category": "network",
+		"featured": false
 	},
 	{
 		"id": "3",
-		"date": "2023-04-15",
-		"title": "리액트 Best Practice!",
-		"description": "리액트를 정확하게 사용하는 방법들을 정리",
-		"category": "frontend",
+		"date": "2023-12-04",
+		"title": "Rest API란?",
+		"description": "프론트엔드 면접 필수 질문인 Rest API에 대해 알아보자!",
+		"category": "network",
 		"featured": false
 	},
 	{
 		"id": "4",
-		"date": "2023-04-10",
-		"title": "Node 프로 팁!",
-		"description": "노드를 프로처럼 사용하기 위한 모든 팁들을 정리",
-		"category": "backend",
-		"featured": true
+		"date": "2023-11-20",
+		"title": "클로저(Closure)란?",
+		"description": "프론트엔드 면접 필수 질문인 클로저에 대해 알아보자!",
+		"category": "javascript",
+		"featured": false
 	},
 	{
 		"id": "5",
-		"date": "2022-06-15",
-		"title": "자바스크립트 10가지 프로팁!",
-		"description": "프로처럼 자바스크립트 사용할 수 있는 10가지 팁",
-		"category": "javascript",
+		"date": "2023-10-31",
+		"title": "React-Query에 대해서 알아보자",
+		"description": "투두리스트를 통해 React-Query을 파헤쳐 보기",
+		"category": "frontend",
 		"featured": true
 	},
 	{
 		"id": "6",
 		"date": "2022-08-21",
-		"title": "Node 기초 정리",
-		"description": "기본적인 Node 사용법에 대해 전부 정리!",
-		"category": "backend",
+		"title": "타입스크립트",
+		"description": "타입스크립트 기본 개념 정리",
+		"category": "frontend",
 		"featured": false
 	},
 	{
 		"id": "7",
-		"date": "2022-12-31",
-		"title": "2022년 리뷰",
-		"description": "2022년 한해동안 배운 기술들, 생각들 정리",
-		"category": "story",
+		"date": "2023-08-31",
+		"title": "split()과 split('') 비교",
+		"description": "프로그래머스 Lv1. 이상한 문자 만들기 문제 풀이를 통해 알아보자",
+		"category": "python",
 		"featured": false
 	},
 	{
 		"id": "8",
 		"date": "2022-05-08",
-		"title": "자바스크립트 기초 문법",
-		"description": "기본 문법부터 사용하는 실전까지 최종 정리",
-		"category": "javascript",
-		"featured": true
+		"title": "format함수와 f-string 비교",
+		"description": "format와 f-string중 뭐가 더 좋을까? 기본 사용법을 ㅇ라아보고, 성능과 이용성 측면에서 비교 분석해보자! ",
+		"category": "python",
+		"featured": false
 	},
 	{
 		"id": "9",
 		"date": "2021-12-31",
-		"title": "2021년 회고",
-		"description": "2021년 한해동안 배운 기술들, 생각들 정리",
+		"title": "얘, 너 왜 퇴사했니?",
+		"description": "데이터분석가로서의 지난 회사 생활 회고",
 		"category": "story",
-		"featured": true
+		"featured": false
 	},
 	{
 		"id": "10",
-		"date": "2023-09-31",
-		"title": "주니어 개발자로서 살아남는 법",
-		"description": "주니어 개발자가 가져야 하는 마음가짐",
-		"category": "story",
-		"featured": false
+		"date": "2022-09-31",
+		"title": "부트캠프 훈련성을 위한 익명 커뮤니티 서비스 <비밀멋사>",
+		"description": "부트캠프 훈련생간의 더욱 활발한 소통을 위한 익명 커뮤니티 앱",
+		"category": "project",
+		"featured": true
 	},
 	{
 		"id": "11",
 		"date": "2024-01-17",
-		"title": "Next.js 버전 14 업데이트 사항",
-		"description": "Next.js 버전 업그레이드 내용",
-		"category": "frontend",
-		"featured": false
+		"title": "요리 레시피를 공유하는 목적의 SNS <레시픽>",
+		"description": "레시피를 공유하는 커뮤니티 SNS",
+		"category": "project",
+		"featured": true
 	},
 	{
 		"id": "12",
 		"date": "2024-01-01",
-		"title": "웹 개발자로서 알아두어야 하는 네트워크",
-		"description": "모든 개발자를 위한 HTTP 웹 기본 지식",
-		"category": "backend",
-		"featured": false
+		"title": "<WikiTodo> : 일정관리 애플리케이션",
+		"description": "React 18, React-Query, TypeScript 공부하기 위해 제작한 Web App",
+		"category": "project",
+		"featured": true
 	}
 ]
