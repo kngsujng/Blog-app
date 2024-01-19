@@ -1,12 +1,14 @@
-import { getContent } from '../api/posts';
 import Image from 'next/image';
 import ReactMarkDown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
-export default async function MarkdownRender({ id }: { id: string }) {
-	const { content } = await getContent(id);
+type Props = {
+	content: string;
+};
+
+export default function MarkdownRender({ content }: Props) {
 	return (
 		<pre className="whitespace-pre-line pb-14 mb-14">
 			<ReactMarkDown

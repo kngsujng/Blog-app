@@ -9,6 +9,7 @@ export type Post = {
 	category: string;
 	featured: boolean;
 };
+export type PostData = Post & { content: string };
 
 export async function getAllPosts(): Promise<Post[]> {
 	const filePath = path.join(process.cwd(), 'data', 'posts.json');
@@ -28,13 +29,13 @@ export async function getNotFeaturedPosts(): Promise<Post[]> {
 	return notFeaturedPosts.filter((post) => !post.featured);
 }
 
-export async function getPost(path: string): Promise<Post | undefined> {
-	const posts = await getAllPosts();
-	return posts.find((item) => item.path === path);
-}
-
-export async function getContent(id: string) {
-	const filePath = path.join(process.cwd(), 'data/posts', `${id}.md`);
+export async function getPostContent(
+	id: string
+): Promise<PostData | undefined> {
+	const filePath = path.join(process.cwd(), 'data', 'posts', `${id}.md`);
+	const metadata = await getAllPosts() //
+		.then((posts) => posts.find((item) => item.path === id));
+	if (!metadata) throw new Error('파일 이름이 없습니다');
 	const content = await fs.readFile(filePath, 'utf-8');
-	return { content, fallback: false };
+	return { ...metadata, content };
 }
