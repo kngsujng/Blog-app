@@ -14,29 +14,26 @@ export default async function Post({ params: { slug } }: Props) {
 	if (post) {
 		const { path, date, title, description } = post;
 		return (
-			<section className="mx-96 rounded-t-3xl bg-gray-50">
+			<article className="rounded-3xl overflow-scroll bg-gray-50 shadow-lg mx-10">
 				<Image
-					className="w-full h-80 object-fill rounded-t-3xl"
+					className="w-full max-h-[500px]"
 					src={`/images/${path}.png`}
 					alt={title}
-					width="300"
-					height="300"
+					width={760}
+					height={300}
 					priority
 				/>
-				<section className="flex justify-between px-6">
-					<div className="py-10">
-						<h1 className="text-4xl font-extrabold">{title}</h1>
-						<p className="text-lg font-semibold">{description}</p>
-					</div>
-					<div className="flex gap-2 p-2 text-sky-600">
+				<section className="flex flex-col justify-between p-6">
+					<div className="flex self-end gap-2 text-sky-600">
 						<FaRegCalendar className="mt-1" />
-						<p className="font-medium">{date}</p>
+						<p className="font-medium">{date.toString()}</p>
 					</div>
-				</section>
-				<section className="p-10 pb-40">
+					<h2 className="text-4xl font-extrabold">{title}</h2>
+					<p className="pt-2 text-lg font-medium">{description}</p>
+					<div className="w-full border-2 border-sky-400 mt-4 mb-10"></div>
 					<MarkdownRender id={path} />
 				</section>
-			</section>
+			</article>
 		);
 	}
 }
