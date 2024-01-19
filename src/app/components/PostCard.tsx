@@ -9,21 +9,24 @@ export default function PostCard({
 }) {
 	return (
 		<Link href={`/posts/${path}`}>
-			<Image
-				src={`/images/${path}.png`}
-				alt="포스트 대표사진"
-				width="600"
-				height="600"
-				priority
-			/>
-			<div className="p-5">
-				<p className="text-right mb-4 text-gray-600">{date}</p>
-				<p className="text-lg font-bold">{title}</p>
-				<p className="p-2 text-ellipsis overflow-hidden">{description}</p>
-				<p className="mt-2 px-2 inline-block rounded-full bg-category">
-					{category}
-				</p>
-			</div>
+			<article className="rounded-md overflow-hidden shadow-lg h-96">
+				<Image
+					className="w-full h-48"
+					src={`/images/${path}.png`}
+					alt={title}
+					width={300}
+					height={200}
+					priority
+				/>
+				<div className="flex flex-col items-center p-4">
+					<time className="self-end mb-4 text-gray-600">{date.toString()}</time>
+					<h3 className="text-lg font-bold w-full truncate">{title}</h3>
+					<p className="w-full truncate text-center">{description}</p>
+					<span className="text-sm rounded-full bg-category px-2 py-1 my-6">
+						{category}
+					</span>
+				</div>
+			</article>
 		</Link>
 	);
 }

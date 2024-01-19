@@ -13,7 +13,9 @@ export type Post = {
 export async function getAllPosts(): Promise<Post[]> {
 	const filePath = path.join(process.cwd(), 'data', 'posts.json');
 	const data = await fs.readFile(filePath, 'utf-8');
-	return JSON.parse(data);
+	return JSON.parse(data).sort((a: Post, b: Post) =>
+		a.date > b.date ? -1 : 1
+	);
 }
 
 export async function getFeaturedPosts(): Promise<Post[]> {
