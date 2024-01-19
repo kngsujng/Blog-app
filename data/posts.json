@@ -59,7 +59,7 @@
 		"path": "format-fString",
 		"date": "2022-05-08",
 		"title": "format함수와 f-string 비교",
-		"description": "format와 f-string중 뭐가 더 좋을까? 기본 사용법을 ㅇ라아보고, 성능과 이용성 측면에서 비교 분석해보자! ",
+		"description": "기본 사용법을 알아보고, 성능과 이용성 측면에서 비교 분석해보자! ",
 		"category": "etc",
 		"featured": false
 	},

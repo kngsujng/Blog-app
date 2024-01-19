@@ -1,6 +1,6 @@
 import { redirect } from 'next/navigation';
 import { Post, getAllPosts } from '../api/posts';
-import Link from 'next/link';
+import AdjacentPostCard from './AdjacentPostCard';
 
 export type Props = { currentPost: Post };
 
@@ -16,18 +16,18 @@ export default async function OtherPost({ currentPost }: Props) {
 		const prevPost = posts[currentIdx - 1];
 		const nextPost = posts[currentIdx + 1];
 		return (
-			<section className="flex justify-between">
+			<section className="flex justify-between shadow-md">
 				{prevPost && (
-					<Link href={`/posts/${prevPost.path}`}>
-						<h3>{prevPost.title}</h3>
-						<p>{prevPost.description}</p>
-					</Link>
+					<AdjacentPostCard
+						post={prevPost}
+						type="prev"
+					/>
 				)}
 				{nextPost && (
-					<Link href={`/posts/${nextPost.path}`}>
-						<h3>{nextPost.title}</h3>
-						<p>{nextPost.description}</p>
-					</Link>
+					<AdjacentPostCard
+						post={nextPost}
+						type="next"
+					/>
 				)}
 			</section>
 		);
