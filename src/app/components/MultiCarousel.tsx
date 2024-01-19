@@ -7,7 +7,7 @@ import 'react-multi-carousel/lib/styles.css';
 const responsive = {
 	superLargeDesktop: {
 		breakpoint: { max: 4000, min: 3000 },
-		items: 5,
+		items: 4,
 	},
 	desktop: {
 		breakpoint: { max: 3000, min: 1024 },
@@ -25,15 +25,14 @@ const responsive = {
 
 export default function MultiCarousel({ children }: { children: ReactNode }) {
 	return (
-		<ul>
-			<Carousel
-				responsive={responsive}
-				infinite
-				autoPlay
-				autoPlaySpeed={2000}
-			>
-				{children}
-			</Carousel>
-		</ul>
+		<Carousel
+			responsive={responsive}
+			infinite
+			autoPlay
+			autoPlaySpeed={2000}
+			itemClass="m-2"
+		>
+			{children}
+		</Carousel>
 	);
 }

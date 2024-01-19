@@ -4,24 +4,30 @@ import { Category } from '../posts/page';
 
 type Props = {
 	categories: Category[];
+	filter: Category;
 	handleCategory: (selectedCategory: Category) => void;
 };
 
-export default function Categories({ categories, handleCategory }: Props) {
+export default function Categories({
+	categories,
+	filter,
+	handleCategory,
+}: Props) {
 	return (
-		<article className="flex flex-col items-center absolute top-6 -right-40">
-			<h1 className="text-lg font-bold underline underline-offset-8 decoration-2 decoration-blue-400 p-2">
+		<article className="text-center p-4">
+			<h2 className="text-lg font-bold underline underline-offset-8 decoration-2 decoration-blue-400 mb-4">
 				Category
-			</h1>
+			</h2>
 			<ul>
-				{categories.map((v: Category, i) => (
-					<li key={v}>
-						<button
-							onClick={() => handleCategory(v)}
-							className="hover:text-blue-400 focus:text-blue-400"
-						>
-							{v}
-						</button>
+				{categories.map((category: Category) => (
+					<li
+						key={category}
+						onClick={() => handleCategory(category)}
+						className={`hover:text-blue-400 cursor-pointer ${
+							category === filter && 'text-blue-400'
+						}`}
+					>
+						{category}
 					</li>
 				))}
 			</ul>

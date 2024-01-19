@@ -2,17 +2,18 @@
 
 import { useState } from 'react';
 import { Post } from '../api/posts';
-import PostCard from './PostCard';
 import { Category } from '../posts/page';
 import Categories from './Categories';
+import PostsGrid from './PostsGrid';
 
 type Prop = {
 	posts: Post[];
 	categories: Category[];
 };
+const ALL_POSTS = 'All Posts';
 
 export default function FilteredPosts({ posts, categories }: Prop) {
-	const [filter, setFilter] = useState('All Posts');
+	const [filter, setFilter] = useState<Category>(ALL_POSTS);
 	const filteredPosts =
 		filter === 'All Posts'
 			? posts
@@ -21,20 +22,11 @@ export default function FilteredPosts({ posts, categories }: Prop) {
 		setFilter(selectedCategory);
 	};
 	return (
-		<section className="relative right-32 mx-56">
-			<ul className="grid grid-cols-3">
-				{filteredPosts &&
-					filteredPosts.map((post) => (
-						<li
-							key={post.path}
-							className="shadow-lg text-center m-4"
-						>
-							<PostCard post={post} />
-						</li>
-					))}
-			</ul>
+		<section className="flex">
+			<PostsGrid posts={filteredPosts} />
 			<Categories
 				categories={categories}
+				filter={filter}
 				handleCategory={handleCategory}
 			/>
 		</section>

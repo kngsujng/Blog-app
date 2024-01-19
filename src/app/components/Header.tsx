@@ -4,7 +4,7 @@ const MENU_CLASSNAME = 'hover:text-blue-400 px-2 rounded-lg';
 
 export default function Header() {
 	return (
-		<header className="flex justify-between p-4 py-10">
+		<header className="flex justify-between p-6 py-10">
 			<Link
 				href="/"
 				className="text-3xl font-bold"
