@@ -8,7 +8,7 @@ import { materialDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 export default async function MarkdownRender({ id }: { id: string }) {
 	const { content } = await getContent(id);
 	return (
-		<pre>
+		<pre className="whitespace-pre-line pb-14 mb-14">
 			<ReactMarkDown
 				className="prose max-w-none"
 				remarkPlugins={[remarkGfm]}
@@ -31,7 +31,7 @@ export default async function MarkdownRender({ id }: { id: string }) {
 					},
 					img: (image) => (
 						<Image
-							className="w-full max-h-60 object-cover"
+							className="w-full  object-fit"
 							src={image.src || ''}
 							alt={image.alt || ''}
 							width={500}

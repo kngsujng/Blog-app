@@ -4,8 +4,6 @@
 
 > 테스트 계정 ID: test@test.com PW: test1234!
 
-<br>
-
 ## 1. 프로젝트 소개
 
 ### 1.1 프로젝트 명 : WIKITODO
@@ -15,128 +13,80 @@
 - 사용자 편의를 위해 다크모드를 지원합니다.
 - 회원 여부에 따라 기능을 차등 지원합니다.
 
-<br>
-
 ### 1.2. 개발 환경
 
 ### [기술 스택]
 
-- Front-End
-
-  <div style="display:inline">
-  <img src ="https://img.shields.io/badge/-TypeScript-informational?&style=for-the-badge&logo=TypeScript&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white">
-  <img src="https://img.shields.io/badge/react query-FF4154?style=for-the-badge&logo=react-query&logoColor=white">    
-  <img src="https://img.shields.io/badge/-styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white">
-
-</div>
-
-- Back-End
-
-  <div>
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=Firebase&logoColor=white">
-  </div>
-
-<br>
-<br>
-<br>
+|     Front-End     | Back-End |
+| :---------------: | :------: |
+|    TypeScript     | Firebase |
+|     React 18      |          |
+|    React-Query    |          |
+| Styled-Components |          |
 
 ## 2. 프로젝트 세부 기능
 
-<table>
-    <tbody>
-        <tr></tr>
-        <tr>
-            <th>시연</th>
-            <th>설명</th>
-        </tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/3418d6ad-31a6-42ff-b615-66e71994cc9e"
-                    alt=""></td>
-            <td>스플래쉬<ul>
-                    <li>회원, 비회원 이용 선택</li>
-                    <li>비회원으로 이용하기: 메인 화면으로 이동</li>
-                    <li>로그인하고 이용하기: 로그인 화면으로 이동</li>
-                </ul>
-            </td>
-        </tr>
-        <tr></tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/2dfb6db9-7b31-4f3b-b62e-d02786424604"
-                    alt=""></td>
-            <td>로그인<ul>
-                    <li>'이메일 로그인', '구글계정을 통한 로그인' 선택</li>
-                    <li>이메일 로그인시, 유효성 검사를 진행하고 오류 메시지 제공</li>
-                    <li>이메일과 비밀번호가 유효한 경우 메인 화면으로 이동</li>
-                    <li>구글계정을 통한 로그인시, 계정 선택 후 메인 화면으로 이동</li>
-                </ul>
-            </td>
-        </tr>
-        <tr></tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/54195d91-41d5-40c2-a531-06f3a4e161e2"
-                    alt=""></td>
-            <td>회원가입<ul>
-                    <li>이메일 로그인을 위한 회원가입 진행</li>
-                    <li>유효성 검사를 진행하고, 오류 메시지 제공</li>
-                    <li>비밀번호 미리보기 기능 제공</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-    
-<br>
+| 스플래쉬 |
+| -------- |
 
-<table>
-    <tbody>
-        <tr></tr>
-        <tr>
-            <th>시연</th>
-            <th>설명</th>
-        </tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/75214be0-848d-4868-8c32-5e923481f6d6"
-                    alt=""></td>
-            <td>메인 페이지<ul>
-                    <li>완료 상태에 따라 필터 기능 제공</li>
-                    <li>할 일 등록, 편집, 삭제 및 스크랩, 완료 토글 기능 제공</li>
-                    <li>다크모드 지원</li>
-                    <li>회원 이용시, 스크랩 모아보기 기능 제공</li>
-                </ul>
-            </td>
-        </tr>
-        <tr></tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/12abf998-2e05-486c-97b7-d45dc9291557"
-                    alt=""></td>
-            <td>등록 페이지<ul>
-                    <li>카테고리, 제목, 상세 내용, 중요도 표시</li>
-                    <li>모든 필수 항목 입력될 때까지 버튼 비활성화</li>
-                </ul>
-            </td>
-        </tr>
-        <tr></tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/40f01bad-6578-4b3c-8eae-6c61fc62bc79"
-                    alt=""></td>
-            <td>상세 페이지<ul>
-                    <li>메인 페이지에서 할 일을 클릭하면 상세 페이지로 이동</li>
-                    <li>카테고리, 제목, 상세 내용 보여줌</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td><img src="https://github.com/kngsujng/WikiTodo/assets/110231276/5d034782-c88f-4029-b60a-8757d5fefb69"
-                    alt=""></td>
-            <td>스크랩 페이지<ul>
-                    <li>최신 날짜순, 카테고리별, 완료 여부에 따라 스크랩된 할 일 필터링</li>
-                    <li>선택된 카테고리에 해당하는 스크랩된 할 일이 없다면, 문구 표시</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
+![이미지1](https://github.com/kngsujng/WikiTodo/assets/110231276/3418d6ad-31a6-42ff-b615-66e71994cc9e)
+
+- 회원, 비회원 이용 선택
+- 비회원으로 이용하기: 메인 화면으로 이동
+- 로그인하고 이용하기: 로그인 화면으로 이동
+
+| 로그인 |
+| ------ |
+
+![이미지2](https://github.com/kngsujng/WikiTodo/assets/110231276/2dfb6db9-7b31-4f3b-b62e-d02786424604)
+
+- '이메일 로그인', '구글계정을 통한 로그인' 선택
+- 이메일 로그인시, 유효성 검사를 진행하고 오류 메시지 제공
+- 이메일과 비밀번호가 유효한 경우 메인 화면으로 이동
+- 구글계정을 통한 로그인시, 계정 선택 후 메인 화면으로 이동
+
+| 회원가입 |
+| -------- |
+
+![이미지3](https://github.com/kngsujng/WikiTodo/assets/110231276/54195d91-41d5-40c2-a531-06f3a4e161e2)
+
+- 이메일 로그인을 위한 회원가입 진행
+- 유효성 검사를 진행하고, 오류 메시지 제공
+- 비밀번호 미리보기 기능 제공
+
+| 메인 페이지 |
+| ----------- |
+
+![이미지4](https://github.com/kngsujng/WikiTodo/assets/110231276/75214be0-848d-4868-8c32-5e923481f6d6)
+
+- 완료 상태에 따라 필터 기능 제공
+- 할 일 등록, 편집, 삭제 및 스크랩, 완료 토글 기능 제공
+- 다크모드 지원
+- 회원 이용시, 스크랩 모아보기 기능 제공
+
+| 등록 페이지 |
+| ----------- |
+
+![이미지5](https://github.com/kngsujng/WikiTodo/assets/110231276/12abf998-2e05-486c-97b7-d45dc9291557)
+
+- 카테고리, 제목, 상세 내용, 중요도 표시
+- 모든 필수 항목 입력될 때까지 버튼 비활성화
+
+| 상세 페이지 |
+| ----------- |
+
+![이미지6](https://github.com/kngsujng/WikiTodo/assets/110231276/40f01bad-6578-4b3c-8eae-6c61fc62bc79)
+
+- 메인 페이지에서 할 일을 클릭하면 상세 페이지로 이동
+- 카테고리, 제목, 상세 내용 보여줌
+
+| 스크랩 페이지 |
+| ------------- |
+
+![이미지7](https://github.com/kngsujng/WikiTodo/assets/110231276/5d034782-c88f-4029-b60a-8757d5fefb69)
+
+- 최신 날짜순, 카테고리별, 완료 여부에 따라 스크랩된 할 일 필터링
+- 선택된 카테고리에 해당하는 스크랩된 할 일이 없다면, 문구 표시
 
 ## 3. 프로젝트 주요 기능 설명
 
@@ -154,10 +104,6 @@ React-Query를 통해 'scrap'과 'uid'의 조합으로 고유한 key를 생성�
 1. useInputWithValidation : 로그인과 회원가입 페이지에서 사용되는 이메일과 비밀번호(확인) 유효성 검사 로직 재사용
 2. useTitle: 페이지별 Doc의 title을 제공하여 사용자 경험 향상 (예시 : WikiTodo | 홈, WikiTodo | 등록 등)
 3. useScrap : 사용자의 uid가 존재하는 경우 한해서만 스크랩된 할 일을 즉각적으로 업데이트 하기 위한 React-Query 로직 재사용
-
-<br>
-<br>
-<br>
 
 ## 4. 트러블 슈팅
 
@@ -260,5 +206,3 @@ const ProtectedRoute = ({ children }: { children: ReactNode }) => {
 };
 export default ProtectedRoute;
 ```
-
-<br>

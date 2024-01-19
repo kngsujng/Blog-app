@@ -14,7 +14,7 @@ export default async function Post({ params: { slug } }: Props) {
 	if (post) {
 		const { path, date, title, description } = post;
 		return (
-			<article className="rounded-3xl overflow-scroll bg-gray-50 shadow-lg mx-10">
+			<article className="rounded-3xl bg-gray-50 shadow-lg sm:mx-4 md:mx-16 lg:mx-60 ">
 				<Image
 					className="w-full max-h-[500px]"
 					src={`/images/${path}.png`}
@@ -23,7 +23,7 @@ export default async function Post({ params: { slug } }: Props) {
 					height={300}
 					priority
 				/>
-				<section className="flex flex-col justify-between p-6">
+				<section className="flex flex-col justify-between p-6 lg:px-16">
 					<div className="flex self-end gap-2 text-sky-600">
 						<FaRegCalendar className="mt-1" />
 						<p className="font-medium">{date.toString()}</p>

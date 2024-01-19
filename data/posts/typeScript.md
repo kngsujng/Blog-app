@@ -1,5 +1,3 @@
-![](https://velog.velcdn.com/images/kngsujng/post/ae635b03-fe97-4c9a-9aef-3b26406d0691/image.png)
-
 # 🧢 타입스크립트를 쓰는 이유
 
 TypeScript는 JavaScript 기반의 **정적 타입 문법을 추가**한 ‘프로그래밍 언어’이다. TypeScript는 JavaScript의 상위 확장자로 **JavaScript 엔진을 사용**하며 자신이 원하는 변수의 타입을 정의하고 프로그래밍을 하면 **JavaScript로 컴파일**되어 실행할 수 있다.
@@ -9,10 +7,6 @@ TypeScript는 JavaScript 기반의 **정적 타입 문법을 추가**한 ‘프�
 
 > **TypeScript (정적 언어)**
 > 컴파일 타임에 타입 결정/오류 발견
-
-<br/>
-<br/>
-<br/>
 
 # 🏝️ 타입 지정하기
 
@@ -40,9 +34,6 @@ const week_copy: Array<string> = ['mon', 'tue', 'wed'];
 type Member = [number, boolean];
 const tuple: Member = [1, false];
 ```
-
-<br/>
-<br/>
 
 ## 2️⃣ object
 
@@ -97,9 +88,6 @@ const student:Student = {
 
 TypeScript는 동시에 여러 유형의 Index Signature를 허용하지 않는다.
 Student 인터페이스에는 두 가지 서로 다른 유형의 Index Signature가 동시에 존재해서 해당 코드는 작동하지 않는다.
-
-<br/>
-<br/>
 
 ## 3️⃣ 함수
 
@@ -156,10 +144,6 @@ type Student = { score: number };
 ```
 
 type은 error가 발생한다.
-
-<br/>
-<br/>
-<br/>
 
 ## 🐥 interface 사용법
 
@@ -268,7 +252,7 @@ a(20, 'f');
 
 - **함수 오버로딩(Function Overloading)**
   동일한 함수지만 전달받은 매개변수의 개수 혹은 타입에 따라 다르게 동작해야 한다면, 오버로드를 사용할 수 있다. 파라미터의 형태가 다양한 여러 케이스에 대응하는 같은 이름을 가진 함수를 만드는 것을 의미한다.
-  <br/>
+
   아래 코드는 signup함수에 age의 타입이 명확하지 않아서 오버로딩 처리한 것이다.
 
 ```ts
@@ -374,8 +358,6 @@ interface Teacher extends Student {
 } // error
 ```
 
-<br/>
-
 ### 비교: Type의 확장
 
 1. `&`기호를 사용하여 intersection type을 생성한다.
@@ -399,10 +381,6 @@ const dog: Dog = { name: 'bow' }; // 중복속성인 name never타입으로 바�
 
 `&`기호는 두 타입 모두 만족하는 타입을 의미하기 때문에 위 코드에서 name 속성은 string도 만족하고, number도 만족해야 하기 때문에 never타입으로 바뀐다. 타입변환만 일어날 뿐, 에러가 나지 않으니 주의해야 한다.
 
-<br/>
-<br/>
-<br/>
-
 # 🎋 Literal Types
 
 ```ts
@@ -425,10 +403,6 @@ const user: User = {
 	job: 'developer',
 };
 ```
-
-<br/>
-<br/>
-<br/>
 
 # 🌴 Union Types
 
@@ -457,10 +431,6 @@ function getGift(gift: Car | Mobile) {
 	}
 }
 ```
-
-<br/>
-<br/>
-<br/>
 
 # 🪵 Intersection Types
 

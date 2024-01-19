@@ -6,7 +6,7 @@
 
 ### 1. 직접 대입
 
-![] (https://velog.velcdn.com/images/kngsujng/post/ca807f77-9e83-4198-be21-d179de2af654/image.png)
+![](https://velog.velcdn.com/images/kngsujng/post/ca807f77-9e83-4198-be21-d179de2af654/image.png)
 
 ![](https://velog.velcdn.com/images/kngsujng/post/263dc403-7d65-476a-84aa-3bf53fed68fc/image.png)
 
@@ -15,25 +15,17 @@
 
 위 코드처럼 중괄호 안에 인덱스값을 입력하면 해당 위치에 있는 인자값이 출력된다. format함수 안에 들어있는 인덱스대로 중괄호안에서 받아서 문자열을 출력한 것을 볼 수 있다. 중괄호 안의 인덱스의 순서가 바뀌어도 해당 번호에 맞는 값이 들어간다.
 
-<br />
-
 ### 2. 변수 대입
 
 ![](https://velog.velcdn.com/images/kngsujng/post/fdce8edc-1414-4621-88a5-0164c089fc40/image.png)
 
 인덱스 대신 변수를 활용하여 문자를 출력할 수 있다. 값을 수정하고 싶을 때 일일이 format함수의 인덱스를 찾지 않고 변수에 접근하면 되기 때문에 가장 간편한 방법이다.
 
-<br />
-
 ### 3. 할당식 대입
 
 ![](https://velog.velcdn.com/images/kngsujng/post/19f7896f-7ba9-4c1a-ac35-3598a3b4af01/image.png)
 
 인덱스 대신 중괄호 {}안에 이름을 넣고, format함수안에서 값을 할당하는 방법이다.
-
-<br />
-<br />
-<br />
 
 # f-string
 
@@ -60,7 +52,6 @@ console.log(string); //자바스크립트는 이렇게 쓰지롱
 ![](https://velog.velcdn.com/images/kngsujng/post/4a801d2f-e2e2-4d82-a4f8-5aeb97127a87/image.png)
 
 위 예시코드에서 볼 수 있듯이 f-string은 중괄호 안에 변수를 대입하여 사용한다. (값을 중괄호 안에 직접 넣어 사용할 수도 있다.) 또한, 파이썬의 표현식을 문자열 안에 삽입하여 출력할 수 있다.
-<br />
 
 ### 2. 함수 호출
 
@@ -70,13 +61,7 @@ console.log(string); //자바스크립트는 이렇게 쓰지롱
 
 f-string을 사용하면 문자열 안에서 함수를 호출할 수 있다. 나아가 객체의 내장함수(ex. count() 등)도 호출할 수 있다. format함수를 사용했을 때 비교했을 때, f-string은 함수와 객체의 함수를 불러올 수 있으니 활용도가 좋다.
 
-<br />
-<br />
-<br />
-
 # format함수와 f-string를 비교해보자!
-
->
 
 - **비교 기준**
   1.  성능 측면 - 연산 속도
@@ -86,7 +71,7 @@ f-string을 사용하면 문자열 안에서 함수를 호출할 수 있다. 나
 
 ### format함수
 
-**1. 직접 대입 **
+**1. 직접 대입**
 
 ```python
 import time
@@ -116,9 +101,7 @@ print(f"{time.time()-start:.4f} sec")
 
 위 예시 코드는 인덱스의 순서를 바꾸면 코드의 수행시간이 조금 증가한 것을 확인할 수 있었다. f-string과의 비교를 위해 인덱스의 순서는 0부터 오름차순으로 재정렬하니까 0.0000초인 것을 확인했다.
 
-<br />
-
-**2. 변수 대입 **
+**2. 변수 대입**
 
 ```python
 import time
@@ -138,9 +121,7 @@ print(f"{time.time()-start:.4f} sec")
 
 f-string과 가장 유사한 방법인데 수행시간이 21초나 나온다.
 
-<br />
-
-**3. 할당식 대입 **
+**3. 할당식 대입**
 
 ```python
 import time
@@ -154,9 +135,6 @@ print(f"{time.time()-start:.4f} sec")
 ```
 
 ![](https://velog.velcdn.com/images/kngsujng/post/cb8ec3b6-9446-4f97-b2b1-a25dfa2d0c18/image.png)
-
-<br />
-<br />
 
 ### f-string
 
@@ -194,9 +172,6 @@ print(f"{time.time()-start:.4f} sec")
 
 #### 👉format함수 변수 대입 방법과 f-string이 유사한데, 수행속도는 f-string이 짧은 것을 확인할 수 있다. format함수 다른 방법과 f-string 코드 수행시간은 모두 동일하다.
 
-<br />
-<br />
-
 ## 👋 이용성 측면
 
 f-string은 문자열 안에 변수와 함수 등을 넣기 때문에 변수의 값을 수정해야 하는 경우나 함수를 바꾸고 싶을 때 언제든 바뀔 수 있어 재사용성이 높다.
@@ -204,9 +179,6 @@ f-string은 문자열 안에 변수와 함수 등을 넣기 때문에 변수의 
 문자열이 길어지는 경우 format함수는 직접 인덱스의 값을 찾아가야 하는 반면에 f-string은 중괄호 안에 직접 변수를 넣기 때문에 문자열이 길어지더라도 값의 순서를 찾아나가는 번거로운 일은 수행하지 않아도 된다.
 
 코드의 직관성 혹은 코드 이해 용이성을 생각할 때, 나는 개인적으로 f-string이 더 직관적이라고 생각한다.
-
-<br />
-<br />
 
 # 정리❗
 
