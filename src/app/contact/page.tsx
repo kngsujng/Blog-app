@@ -7,7 +7,7 @@ export default function Contact() {
 	return (
 		<>
 			<section className="text-center">
-				<h1 className="text-2xl font-bold mt-10 ml-4">Contact me</h1>
+				<h2 className="text-2xl font-bold mt-10 ml-4">Contact me</h2>
 				<p className="my-3">kngsujng@naver.com</p>
 				<div className="flex items-center justify-center gap-3">
 					<Link href="https://github.com/kngsujng">

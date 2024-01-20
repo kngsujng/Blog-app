@@ -1,35 +1,45 @@
 'use client';
 
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
 
 const LABEL_CLASSNAME = 'text-white flex flex-col';
 
 export type ContactValue = {
-	email: string;
+	from: string;
 	subject: string;
 	message: string;
 };
 
 const initialValue = {
-	email: '',
+	from: '',
 	subject: '',
 	message: '',
 };
 
 export default function EmailForm() {
 	const [contactValue, setContactValue] = useState<ContactValue>(initialValue);
+	const [message, setMessage] = useState<string>('');
 	const onChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
 		const { value, name } = e.target;
 		setContactValue((prev) => ({ ...prev, [name]: value }));
 	};
-	const handleSubmit = () => {
+	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
 		sendContactEmail(contactValue);
+		setMessage('성공적으로 전송되었습니다! ✌️ ');
+		setContactValue(initialValue);
 	};
+
+	useEffect(() => {
+		const timer = setTimeout(() => setMessage(''), 3000);
+		return () => clearTimeout(timer);
+	}, [message]);
 
 	return (
 		<section className="text-center mx-auto my-28 w-2/5">
+			{message}
 			<h2 className="text-2xl font-bold mt-10 mb-4 ml-4">
 				Or Send me an email
 			</h2>
@@ -43,8 +53,8 @@ export default function EmailForm() {
 						required
 						type="text"
 						className="mt-2 text-black"
-						name="email"
-						value={contactValue.email}
+						name="from"
+						value={contactValue.from}
 						onChange={onChange}
 					/>
 				</label>
