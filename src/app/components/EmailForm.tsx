@@ -30,9 +30,9 @@ export default function EmailForm() {
 
 	return (
 		<section className="text-center mx-auto my-28 w-2/5">
-			<h1 className="text-2xl font-bold mt-10 mb-4 ml-4">
+			<h2 className="text-2xl font-bold mt-10 mb-4 ml-4">
 				Or Send me an email
-			</h1>
+			</h2>
 			<form
 				onSubmit={handleSubmit}
 				className="flex flex-col gap-4 text-left justify-center p-8 bg-slate-600 rounded-3xl"
