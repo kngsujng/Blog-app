@@ -1,4 +1,4 @@
-import { Post, getPostContent } from '@/app/api/posts';
+import { Post, getFeaturedPosts, getPostContent } from '@/app/api/posts';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import OtherPost from '@/app/components/OtherPost';
@@ -41,4 +41,9 @@ export default async function Post({ params: { slug } }: Props) {
 			</article>
 		);
 	}
+}
+
+export async function generateStaticParams() {
+	const posts = await getFeaturedPosts();
+	return posts.map((post) => ({ slug: post.path }));
 }
