@@ -10,8 +10,8 @@ const LINKS = [
 export default function Contact() {
 	return (
 		<>
-			<section className="text-center">
-				<h2 className="text-2xl font-bold mt-10 ml-4">Contact me</h2>
+			<section className="flex flex-col items-center">
+				<h2 className="text-2xl font-bold mt-2">Contact me</h2>
 				<p className="my-3">kngsujng@naver.com</p>
 				<ul className="flex items-center justify-center gap-3">
 					{LINKS.map((link, index) => (
