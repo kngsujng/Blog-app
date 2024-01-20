@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Banner, { BannerData } from './Banner';
+import { sendContactEmail } from '../api/contact';
 
 export type ContactValue = {
 	from: string;
@@ -26,13 +27,26 @@ export default function EmailForm() {
 	};
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		sendContactEmail(contactValue);
-		setBanner({
-			message: '성공적으로 전송되었습니다! ✌️ ',
-			state: 'success',
-		});
-		// setTimeout(() => setBanner(null), 3000);
-		setContactValue(initialValue);
+		sendContactEmail(contactValue) //
+			.then(() => {
+				setBanner({
+					message: '메일이 성공적으로 전송되었습니다! ✌️ ',
+					state: 'success',
+				});
+				setContactValue(initialValue);
+			}) //
+			.catch(() => {
+				setBanner({
+					message: '메일 전송에 실패했습니다. 다시 시도해주세요 ! ',
+					state: 'error',
+				});
+			}) //
+			.finally(() => {
+				setTimeout(() => {
+					setBanner(null);
+				}, 3000);
+				setContactValue(initialValue);
+			});
 	};
 
 	return (
@@ -83,23 +97,4 @@ export default function EmailForm() {
 			</form>
 		</section>
 	);
-}
-
-export async function sendContactEmail(emailForm: ContactValue) {
-	// Nextjs app 폴더 내 api로 post 요청
-	const response = await fetch('/api/contact', {
-		method: 'POST',
-		body: JSON.stringify(emailForm),
-		headers: {
-			'Content-Type': 'application/json',
-		},
-	});
-
-	const data = await response.json();
-
-	if (!response.ok) {
-		throw new Error(data.message || '서버 요청에 실패함');
-	}
-
-	return data;
 }

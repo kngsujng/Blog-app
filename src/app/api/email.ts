@@ -12,25 +12,17 @@ const transporter = nodemailer.createTransport({
 	},
 });
 
-export const mailOptions = {
-	from: '',
-	to: to,
-	subject: '',
-	message: '',
-};
-
-export async function sendEmail({ email, subject, message }: ContactValue) {
+export function sendEmail({ from, subject, message }: ContactValue) {
 	const mailData = {
 		to,
-		from: email,
+		from,
 		subject: `[BLOG-APP] ${subject}`,
 		html: `
     <h1>${subject}</h1>
     <div>${message}</div>
     </br>
-    <p>보낸사람 : ${email}</p>
+    <p>보낸사람 : ${from}</p>
     `,
 	};
-	const info = await transporter.sendMail(mailData);
-	return info;
+	return transporter.sendMail(mailData);
 }
