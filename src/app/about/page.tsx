@@ -1,5 +1,11 @@
 import Link from 'next/link';
 import Profile from '../components/Profile';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'About me',
+	description: 'Kngsujng 소개 페이지',
+};
 
 export default function About() {
 	const TITLE_CLASS = 'text-3xl font-bold mt-16 mb-4';

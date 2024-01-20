@@ -9,7 +9,7 @@ export default function Header() {
 				href="/"
 				className="text-3xl font-bold"
 			>
-				<h1>Kngsujng&apos;s Blog</h1>
+				<h1>Kngsujng</h1>
 			</Link>
 			<nav className="flex gap-4">
 				<Link

@@ -1,5 +1,11 @@
+import { Metadata } from 'next';
 import { getAllPosts } from '../api/posts';
 import FilteredPosts from '../components/FilteredPosts';
+
+export const metadata: Metadata = {
+	title: 'All Posts',
+	description: '블로그 전체 글 보기',
+};
 
 export type Category =
 	| 'All Posts'

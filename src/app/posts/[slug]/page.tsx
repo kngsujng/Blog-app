@@ -1,11 +1,22 @@
 import { Post, getPostContent } from '@/app/api/posts';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
-
 import OtherPost from '@/app/components/OtherPost';
 import PostContent from '@/app/components/PostContent';
+import { Metadata } from 'next';
 
 export type Props = { params: { slug: string } };
+
+export async function generateMetadata({
+	params: { slug },
+}: Props): Promise<Metadata> {
+	const { path, description } = (await getPostContent(slug)) as Post;
+
+	return {
+		title: path,
+		description: description,
+	};
+}
 
 export default async function Post({ params: { slug } }: Props) {
 	const post = await getPostContent(slug);

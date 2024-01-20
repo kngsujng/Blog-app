@@ -1,6 +1,12 @@
 import { FaGithub, FaInstagram } from 'react-icons/fa';
 import { SiVelog } from 'react-icons/si';
 import EmailForm from '../components/EmailForm';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Contact me',
+	description: 'Kngsujng에게 이메일 보내기',
+};
 
 const LINKS = [
 	{ icon: <FaGithub />, url: 'https://github.com/kngsujng' },
