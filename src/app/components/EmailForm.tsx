@@ -1,6 +1,7 @@
 'use client';
 
-import { use, useEffect, useState } from 'react';
+import { useState } from 'react';
+import Banner, { BannerData } from './Banner';
 
 const LABEL_CLASSNAME = 'text-white flex flex-col';
 
@@ -18,7 +19,7 @@ const initialValue = {
 
 export default function EmailForm() {
 	const [contactValue, setContactValue] = useState<ContactValue>(initialValue);
-	const [message, setMessage] = useState<string>('');
+	const [banner, setBanner] = useState<BannerData | null>(null);
 	const onChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
 	) => {
@@ -28,18 +29,17 @@ export default function EmailForm() {
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		sendContactEmail(contactValue);
-		setMessage('성공적으로 전송되었습니다! ✌️ ');
+		setBanner({
+			message: '성공적으로 전송되었습니다! ✌️ ',
+			state: 'success',
+		});
+		setTimeout(() => setBanner(null), 3000);
 		setContactValue(initialValue);
 	};
 
-	useEffect(() => {
-		const timer = setTimeout(() => setMessage(''), 3000);
-		return () => clearTimeout(timer);
-	}, [message]);
-
 	return (
 		<section className="text-center mx-auto my-28 w-2/5">
-			{message}
+			{banner && <Banner banner={banner} />}
 			<h2 className="text-2xl font-bold mt-10 mb-4 ml-4">
 				Or Send me an email
 			</h2>
@@ -51,6 +51,7 @@ export default function EmailForm() {
 					Your Email
 					<input
 						required
+						autoFocus
 						type="text"
 						className="mt-2 text-black"
 						name="from"
@@ -73,6 +74,7 @@ export default function EmailForm() {
 					Message
 					<textarea
 						required
+						rows={10}
 						className="h-56 mt-2 resize-none text-black"
 						name="message"
 						value={contactValue.message}
