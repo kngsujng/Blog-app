@@ -10,7 +10,7 @@
 	},
 	"dependencies": {
 		"@types/react-syntax-highlighter": "^15.5.11",
-		"next": "14.0.4",
+		"next": "^14.0.5-canary.60",
 		"nodemailer": "^6.9.8",
 		"react": "^18",
 		"react-dom": "^18",
