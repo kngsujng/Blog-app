@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { SlLocationPin } from 'react-icons/sl';
 import { getGitHubProfile } from '../api/github';
 
-type Props = {
+type GitHubProfile = {
 	data: {
 		login: string;
 		avatar_url: string;
@@ -10,13 +10,18 @@ type Props = {
 		bio: string;
 	};
 };
+
+type Props = {
+	data: Partial<GitHubProfile>;
+};
+
 const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME as string;
 const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN as string;
 
 export default async function Profile() {
-	const data = await getGitHubProfile(username, accessToken);
+	const data: Props['data'] = await getGitHubProfile(username, accessToken);
 
-	const { login, avatar_url, location, bio } = data;
+	const { login, avatar_url, location, bio } = data as GitHubProfile['data'];
 	return (
 		<section className="p-4 text-center">
 			<Image
