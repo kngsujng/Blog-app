@@ -5,6 +5,7 @@ const nextConfig = {
 			{ protocol: 'https', hostname: 'velog.velcdn.com' },
 			{ protocol: 'https', hostname: 'user-images.githubusercontent.com' },
 			{ protocol: 'https', hostname: 'github.com' },
+			{ protocol: 'https', hostname: 'avatars.githubusercontent.com' },
 		],
 	},
 };

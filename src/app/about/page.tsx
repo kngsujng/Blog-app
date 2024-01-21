@@ -7,12 +7,13 @@ export const metadata: Metadata = {
 	description: 'Kngsujng 소개 페이지',
 };
 
+const TITLE_CLASS = 'text-3xl font-bold mt-16 mb-4';
+const SUBTITLE_CLASS = 'font-bold text-xl text-blue-500 mt-4';
+const LINK_CLASS =
+	'border-b-2 hover:text-blue-500 hover:border-b-blue-300 mr-3';
+const PROJECT_TITLE_CLASS = 'font-bold text-xl mt-10';
+
 export default function About() {
-	const TITLE_CLASS = 'text-3xl font-bold mt-16 mb-4';
-	const SUBTITLE_CLASS = 'font-bold text-xl text-blue-500 mt-4';
-	const LINK_CLASS =
-		'border-b-2 hover:text-blue-500 hover:border-b-blue-300 mr-3';
-	const PROJECT_TITLE_CLASS = 'font-bold text-xl mt-10';
 	return (
 		<>
 			<Profile />

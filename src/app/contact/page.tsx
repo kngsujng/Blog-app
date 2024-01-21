@@ -18,7 +18,7 @@ export default function Contact() {
 		<>
 			<section className="flex flex-col items-center">
 				<h2 className="text-2xl font-bold mt-2">Contact me</h2>
-				<p className="my-3">kngsujng@naver.com</p>
+				<p className="my-3">ksj00818@gmail.com</p>
 				<ul className="flex items-center justify-center gap-3">
 					{LINKS.map((link, index) => (
 						<a
