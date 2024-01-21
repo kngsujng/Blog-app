@@ -24,5 +24,6 @@ export function sendEmail({ from, subject, message }: ContactValue) {
     <p>보낸사람 : ${from}</p>
     `,
 	};
-	return transporter.sendMail(mailData);
+	const info = transporter.sendMail(mailData);
+	return info;
 }
