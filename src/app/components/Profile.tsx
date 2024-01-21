@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { SlLocationPin } from 'react-icons/sl';
 import { getGitHubProfile } from '../api/github';
 
-type Props = {
+type GitHubProfile = {
 	data: {
 		login: string;
 		avatar_url: string;
@@ -10,6 +10,7 @@ type Props = {
 		bio: string;
 	};
 };
+
 const username = process.env.NEXT_GITHUB_USERNAME as string;
 const accessToken = process.env.NEXT_GITHUB_ACCESS_TOKEN as string;
 
