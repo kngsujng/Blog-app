@@ -10,8 +10,8 @@ type Props = {
 		bio: string;
 	};
 };
-const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME as string;
-const accessToken = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN as string;
+const username = process.env.NEXT_GITHUB_USERNAME as string;
+const accessToken = process.env.NEXT_GITHUB_ACCESS_TOKEN as string;
 
 export default async function Profile() {
 	const data = await getGitHubProfile(username, accessToken);
