@@ -7,7 +7,7 @@ const DynamicGitHubCommit = dynamic(() => import('./components/GitHubCommit'), {
 	ssr: false,
 });
 
-export default async function Home() {
+export default function Home() {
 	return (
 		<>
 			<Profile />

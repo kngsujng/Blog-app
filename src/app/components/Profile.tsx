@@ -16,7 +16,6 @@ const accessToken = process.env.NEXT_GITHUB_ACCESS_TOKEN as string;
 
 export default async function Profile() {
 	const data = await getGitHubProfile(username, accessToken);
-
 	const { login, avatar_url, location, bio } = data;
 	return (
 		<section className="p-4 text-center">
